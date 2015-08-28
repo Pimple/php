@@ -98,9 +98,5 @@
 			echo '</script>' . PHP_EOL;
 		}
 	?>
-
-	<script type="text/javascript">
-		document.myForm.year.focus();
-	</script>
 </body>
 </html>
