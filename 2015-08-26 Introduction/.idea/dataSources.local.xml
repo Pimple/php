@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - php01@localhost" uuid="e28c5c89-aab4-402b-b794-f540c8d6fd99">
+      <secret-storage>memory</secret-storage>
+      <user-name>php01</user-name>
+      <schema-pattern>php01.*</schema-pattern>
+      <default-schemas>php01.*</default-schemas>
+    </data-source>
+  </component>
+</project>
