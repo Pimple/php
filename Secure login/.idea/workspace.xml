@@ -53,13 +53,13 @@
       <file leaf-file-name="register.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/register.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54285717">
-              <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.8">
+              <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
               <folding>
-                <marker date="1441792464569" expanded="true" signature="666:712" placeholder="SELECT id FR..members..." />
-                <marker date="1441792464569" expanded="true" signature="1102:1151" placeholder="SELECT id FR..members..." />
-                <marker date="1441792464569" expanded="true" signature="1737:1810" placeholder="INSERT INTO ..." />
-                <marker date="1441792464569" expanded="true" signature="2084:2157" placeholder="INSERT INTO ..." />
+                <marker date="1441792581212" expanded="true" signature="666:712" placeholder="SELECT id FR..members..." />
+                <marker date="1441792581212" expanded="true" signature="1102:1151" placeholder="SELECT id FR..members..." />
+                <marker date="1441792581212" expanded="true" signature="1736:1809" placeholder="INSERT INTO ..." />
+                <marker date="1441792581212" expanded="true" signature="2083:2156" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -484,13 +484,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/register.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54285717">
-          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.8">
+          <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
           <folding>
-            <marker date="1441792464569" expanded="true" signature="666:712" placeholder="SELECT id FR..members..." />
-            <marker date="1441792464569" expanded="true" signature="1102:1151" placeholder="SELECT id FR..members..." />
-            <marker date="1441792464569" expanded="true" signature="1737:1810" placeholder="INSERT INTO ..." />
-            <marker date="1441792464569" expanded="true" signature="2084:2157" placeholder="INSERT INTO ..." />
+            <marker date="1441792581212" expanded="true" signature="666:712" placeholder="SELECT id FR..members..." />
+            <marker date="1441792581212" expanded="true" signature="1102:1151" placeholder="SELECT id FR..members..." />
+            <marker date="1441792581212" expanded="true" signature="1736:1809" placeholder="INSERT INTO ..." />
+            <marker date="1441792581212" expanded="true" signature="2083:2156" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

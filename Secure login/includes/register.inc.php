@@ -56,7 +56,6 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p']))
 	if (empty($error_msg))
 	{
 		$random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
-
 		$password = hash('sha512', $password . $random_salt);
 
 		try
