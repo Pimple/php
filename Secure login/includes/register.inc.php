@@ -20,40 +20,36 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p']))
 	$sql = "SELECT id FROM members WHERE email = ? LIMIT 1";
 	$connection = $database->prepare($sql);
 
-	if ($connection !== null)
+	try
 	{
 		$connection->execute([$email]);
 
 		if ($connection->rowCount() == 1)
-		{
 			$error_msg .= '<p class="error">A user with this email address already exists.</p>';
-			$connection->close();
-		}
+
 		$connection = null;
 	}
-	else
+	catch (PDOException $ex)
 	{
-		$error_msg .= '<p class="error">Database error Line 36</p>';
+		$error_msg .= '<p class="error">Database error Line 36</p>' . "<p>Also... {$ex}</p>";
 		$connection = null;
 	}
 
 	$sql = "SELECT id FROM members WHERE username = ? LIMIT 1";
 	$connection = $database->prepare($sql);
 
-	if ($connection !== null)
+	try
 	{
 		$connection->execute([$username]);
 
 		if ($connection->rowCount() == 1)
-		{
 			$error_msg .= '<p class="error">A user with this username already exists</p>';
-			$connection->close();
-		}
+
 		$connection = null;
 	}
-	else
+	catch (PDOException $ex)
 	{
-		$error_msg .= '<p class="error">Database error line 56</p>';
+		$error_msg .= '<p class="error">Database error line 56</p>' . "<p>Also... {$ex}</p>";
 		$connection = null;
 	}
 
@@ -63,12 +59,21 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p']))
 
 		$password = hash('sha512', $password . $random_salt);
 
-		if ($connection = $database->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)"))
-			if (!$connection->execute([$username, $email, $password, $random_salt]))
-				header('Location: ../error.php?err=Registration failure: INSERT');
+		try
+		{
+			$connection = $database->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)");
+			$connection->execute([$username, $email, $password, $random_salt]);
+			header('Location: ../error.php?err=Registration failure: INSERT');
+		}
+		catch (PDOException $ex)
+		{
+			header('Location: ./register_success.php');
+		}
 
-		header('Location: ./register_success.php');
+//		if ($connection = $database->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)"))
+//			if (!$connection->execute([$username, $email, $password, $random_salt]))
+//				header('Location: ../error.php?err=Registration failure: INSERT');
+//
+//		header('Location: ./register_success.php');
 	}
 }
-else
-	$error_msg .= "\"This should never happen.\"";

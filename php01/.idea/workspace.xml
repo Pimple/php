@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6828aa6-1402-4dea-b6cc-5119b4361191" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/includes/Database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/js/forms.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/includes/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/includes/logout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/includes/process_login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/protected_page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/includes/psl-config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/register.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/register_success.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Secure login/js/sha512.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Secure login/includes/register.inc.php" afterPath="$PROJECT_DIR$/../Secure login/includes/register.inc.php" />
     </list>
     <ignored path="php01.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -229,7 +214,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
@@ -288,7 +273,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
