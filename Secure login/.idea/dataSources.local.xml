@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - secure_login@localhost" uuid="22ecbfd7-77d6-45a8-9467-4ce863116bb2">
+      <secret-storage>memory</secret-storage>
+      <user-name>secure_login</user-name>
+      <schema-pattern>secure_login.*</schema-pattern>
+      <default-schemas>secure_login.*</default-schemas>
+    </data-source>
+  </component>
+</project>
