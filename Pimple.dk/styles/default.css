@@ -1,0 +1,60 @@
+/**
+ * 	http://www.colorcombos.com/color-schemes/303/ColorCombo303.html
+ */
+
+body
+{
+	background: #7A3E48;
+	color: #222222;
+	margin: 50px 10px 150px 50px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 17px;
+}
+a
+{
+	color: #E18942;
+	text-decoration: underline;
+}
+a:active
+{
+	color: #EECD86;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #B95835;
+	text-decoration: underline;
+}
+
+#wrapper
+{
+	position: relative;
+	background: #ffffff;
+	min-width: 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 25px;
+	border-radius: 25px;
+	border: 2px solid #333333;
+	box-shadow: 10px 10px 5px #4A0E18;
+}
+
+#wrapper h1
+{
+	margin-top: 0px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #B95835;
+	box-shadow: 0px 2px 0px #EECD86;
+}
+#wrapper p { line-height: 120%; }
+
+#footer
+{
+	font-size: 14px;
+	color: #999999;
+	margin-top: 60px;
+	text-align: center;
+	padding-top: 10px;
+	border-top: 1px solid #B95835;
+	box-shadow: 0px -2px 0px #EECD86;
+}
