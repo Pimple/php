@@ -165,3 +165,50 @@ function esc_url($url)
 	else
 		return $url;
 }
+
+function fetchRandomUsers($n)
+{
+	$user = file_get_contents("http://api.randomuser.me/?results=" . $n); // &format=json
+	$list = json_decode($user, true);
+
+	$database = Database::getInstance();
+
+	foreach($list['results'] as $user)
+	{
+		$firstName = $user['user']['name']['first'];
+		$lastName = $user['user']['name']['last'];
+		$username = $user['user']['username'];
+		$password = $user['user']['password'];
+		$salt = $user['user']['salt'];
+		$passwordHash = $user['user']['sha256'];
+		$gender = $user['user']['gender'];
+		$email = $user['user']['email'];
+		$phone = $user['user']['phone'];
+		$cell = $user['user']['cell'];
+		$thumbnail = $user['user']['picture']['thumbnail'];
+		$largePicture = $user['user']['picture']['large'];
+		$mediumPicture = $user['user']['picture']['medium'];
+
+		$sql = "INSERT INTO
+				randomusers
+			SET
+				firstname = ?,
+				lastname = ?,
+				username = ?,
+				password = ?,
+				salt = ?,
+				hash = ?,
+				gender = ?,
+				email = ?,
+				phone = ?,
+				cell = ?,
+				thumbnail = ?,
+				largepic = ?,
+				mediumpic = ?;";
+
+		$connection = $database->prepare($sql);
+		$connection->execute([$firstName, $lastName, $username, $password, $salt, $passwordHash, $gender, $email,
+			$phone, $cell, $thumbnail, $largePicture, $mediumPicture]);
+		// echo $username . " added.<br>";
+	}
+}
