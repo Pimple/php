@@ -27,7 +27,6 @@ function secure_session_start()
 	 * Se mere her: http://php.net/manual/en/function.session-set-cookie-params.php
 	 */
 	$cookieParams = session_get_cookie_params();
-	var_dump($cookieParams);
 	session_set_cookie_params($cookieParams["lifetime"],
 		$cookieParams["path"],
 		$cookieParams["domain"],
@@ -52,6 +51,13 @@ function login($username, $password)
 	$realPassword = hash('sha512', PASSWORD . SALT);
 	$passwordEntered = hash('sha512', $password . SALT);
 
+	echo $realPassword . "<br>" . hash("sha512", PASSWORD . SALT) . "<br><br>";
+	echo $passwordEntered . "<br>" . hash("sha512", $password . SALT) . "<br><br>";
+	echo $username . "<br>";
+	echo USERNAME . "<br><br>";
+	echo $password . "<br>";
+	echo PASSWORD;
+
 	if ($username == USERNAME && $passwordEntered == $realPassword)
 	{
 		$user_browser = $_SERVER['HTTP_USER_AGENT'];
@@ -63,7 +69,7 @@ function login($username, $password)
 		 * Se mere: https://en.wikipedia.org/wiki/Cross-site_scripting
 		 */
 		$username = preg_replace("/[^0-9]+/", "", $username);
-		$username = preg_replace("/[^a-zA-Z0-9_\-]+/", "", $username);
+		$username = preg_replace('/[^a-zA-Z0-9_\-]+/', "", $username);
 
 		/**
 		 * Her sættes session variablerne som bruges til at genkende at brugeren er logget ind.
@@ -94,29 +100,32 @@ function login($username, $password)
  */
 function login_check()
 {
+	var_dump($_SESSION);
 	/**
 	 * Hvis brugeren er logget ind bør session variablerne 'username' og 'login_string' (fordi vi kaldte dem det)
 	 * være sat. Så vi tjekker om det er tilfældet,
 	 */
-	if(!isset($_SESSION['username'], $_SESSION['login_string']))
+	if(!isset($_SESSION["username"], $_SESSION["login_string"]))
 	{
 		return false;
 	}
 	else
 	{
-		$login_string = $_SESSION['login_string'];
-		$username = $_SESSION['username'];
+		$login_string = $_SESSION["login_string"];
+		$username = $_SESSION["username"];
 
-		$user_browser = $_SERVER['HTTP_USER_AGENT'];
+		$user_browser = $_SERVER["HTTP_USER_AGENT"];
+
+		echo $username . " == " . USERNAME . "<br><br>";
 
 		/**
-		 * Så længe $_SESSION['username'] kun kan blive sat hvis det brugernavn og den kode man tastede ind er rigtige,
-		 * så behøver vi kun at tjekke om $_SESSION['username'] matcher det rigtige brugernavn for at vide om brugeren
+		 * Så længe $_SESSION["username"] kun kan blive sat hvis det brugernavn og den kode man tastede ind er rigtige,
+		 * så behøver vi kun at tjekke om $_SESSION["username"] matcher det rigtige brugernavn for at vide om brugeren
 		 * er logget ind.
 		 */
 		if ($username == USERNAME)
 		{
-			$password = PASSWORD;
+			$password = hash("sha512", PASSWORD . SALT);
 			$login_check = hash('sha512', $password . $user_browser);
 
 			/**
@@ -135,7 +144,7 @@ function login_check()
 		}
 		else
 		{
-			echo "Session username does not match admin username. This shouldn't happen. Like, ever. WHy am I writing this?";
+			echo "Session username does not match admin username. This shouldn't happen. Like, ever. Why am I writing this?";
 			return true;
 		}
 	}
