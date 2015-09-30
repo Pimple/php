@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f5103ad-a6d6-4411-83e7-6eefae89a2a8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/application/controllers/DataTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/application/views/calendar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/application/views/datatest_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/forms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/jquery-1.11.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/styles/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/npm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CodeIgniter/scripts/sha512.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Simplelogin/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Simplelogin/.idea/workspace.xml" />
     </list>
     <ignored path="Secure login.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="protected_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.600713">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
               <folding>
                 <marker date="1442402362603" expanded="true" signature="1139:1179" placeholder="select * fro..randomusers..." />
               </folding>
@@ -72,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userinfo.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userinfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64107144">
+            <state vertical-scroll-proportion="0.0">
               <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
               <folding>
                 <marker date="1442404759871" expanded="true" signature="276:314" placeholder="select * fro..randomusers..." />
@@ -98,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/includes/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="171" selection-end-column="37" />
+              <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
               <folding>
                 <marker date="1442390914499" expanded="true" signature="705:777" placeholder="SELECT id, u..members..." />
                 <marker date="1442390914499" expanded="true" signature="1707:1775" placeholder="INSERT INTO ..." />
@@ -114,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/includes/psl-config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -198,6 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -227,17 +245,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Secure login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Secure login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Simplelogin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -300,10 +331,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2647504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2806354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -344,6 +375,80 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/includes/psl-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22ecbfd7-77d6-45a8-9467-4ce863116bb2/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1442402362603" expanded="true" signature="1139:1179" placeholder="select * fro..randomusers..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1442404759871" expanded="true" signature="276:314" placeholder="select * fro..randomusers..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="171" selection-end-column="37" />
+          <folding>
+            <marker date="1442390914499" expanded="true" signature="705:777" placeholder="SELECT id, u..members..." />
+            <marker date="1442390914499" expanded="true" signature="1707:1775" placeholder="INSERT INTO ..." />
+            <marker date="1442390914499" expanded="true" signature="2045:2123" placeholder="SELECT time ..." />
+            <marker date="1442390914499" expanded="true" signature="2648:2697" placeholder="SELECT passw..members..." />
+            <marker date="1442390914499" expanded="true" signature="4398:4648" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/psl-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/22ecbfd7-77d6-45a8-9467-4ce863116bb2/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -613,22 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/psl-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/Database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.0">
@@ -665,35 +754,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="171" selection-end-column="37" />
-          <folding>
-            <marker date="1442390914499" expanded="true" signature="705:777" placeholder="SELECT id, u..members..." />
-            <marker date="1442390914499" expanded="true" signature="1707:1775" placeholder="INSERT INTO ..." />
-            <marker date="1442390914499" expanded="true" signature="2045:2123" placeholder="SELECT time ..." />
-            <marker date="1442390914499" expanded="true" signature="2648:2697" placeholder="SELECT passw..members..." />
-            <marker date="1442390914499" expanded="true" signature="4398:4648" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="67" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1442402362603" expanded="true" signature="1139:1179" placeholder="select * fro..randomusers..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,10 +772,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userinfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64107144">
+        <state vertical-scroll-proportion="0.0">
           <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
           <folding>
             <marker date="1442404759871" expanded="true" signature="276:314" placeholder="select * fro..randomusers..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/psl-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
+          <folding>
+            <marker date="1442390914499" expanded="true" signature="705:777" placeholder="SELECT id, u..members..." />
+            <marker date="1442390914499" expanded="true" signature="1707:1775" placeholder="INSERT INTO ..." />
+            <marker date="1442390914499" expanded="true" signature="2045:2123" placeholder="SELECT time ..." />
+            <marker date="1442390914499" expanded="true" signature="2648:2697" placeholder="SELECT passw..members..." />
+            <marker date="1442390914499" expanded="true" signature="4398:4648" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333">
+          <caret line="17" column="129" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.600713">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+          <folding>
+            <marker date="1442402362603" expanded="true" signature="1139:1179" placeholder="select * fro..randomusers..." />
           </folding>
         </state>
       </provider>
