@@ -1,0 +1,9 @@
+{
+    "require-dev": {
+        "behat/behat": "~2.5",
+        "phpunit/phpunit": "4.8.*"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
