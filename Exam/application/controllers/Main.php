@@ -7,48 +7,56 @@ class Main extends CI_Controller
 	{
 		$weather_key = "657e91b342e3ba80";
 		$country_code = "Denmark";
-		$cities = ["Viborg", "Copenhagen"];
+		$cities = ["Randers", "Aalborg", "Aarhus", "Viborg", "Copenhagen"];
 
 		$this->load->database();
 		$query = $this->db->query('select max(timestamp) from weatherdata');
-		$data["test"] = "Test text unchanged";
-//		if ($query->num_rows > 0)
-//		{
-//			$latest_timestamp = $query->result_object->timestamp;
-//
-//			$data["test"] = $latest_timestamp;
-//			$current_timestamp = date("Y-m-d H:i:s");
-//
-//			if (date("Y-m-d", $latest_timestamp) < date("Y-m-d", $current_timestamp) or
-//					date("Y-m-d", $latest_timestamp) == date("Y-m-d", $current_timestamp) and
-//					date("H", $latest_timestamp) > date("H", $current_timestamp))
-//			{
+
+		if (count($query->result_array()) > 0)
+		{
+			$latest_timestamp = strtotime($query->result_array()[0]["max(timestamp)"]);
+			$current_timestamp = date("Y-m-d H:i:s");
+			$data["test"] = $latest_timestamp;
+
+			if (date("Y-m-d", $latest_timestamp) < date("Y-m-d", strtotime($current_timestamp)) or
+					(date("Y-m-d", $latest_timestamp) == date("Y-m-d", strtotime($current_timestamp)) and
+					date("H", $latest_timestamp) + 24 < date("H", strtotime($current_timestamp))))
+			{
 				$dates = array();
-				foreach ($cities as $city) {
+				foreach ($cities as $city)
+				{
 					$service_url = "http://api.wunderground.com/api/" . $weather_key . "/forecast/q/" . $country_code . "/" . $city . ".json";
 					$forecast_json = file_get_contents($service_url);
 					$forecast = json_decode($forecast_json, true);
-					$data["test"] = $forecast_json;
+
+					$iSigh = 0;
 
 					for ($i = 0; $i < 8; $i++)
 					{
-						$period = $forecast["forecast"]["txt_forecast"]["forecastday"][$i]["period"];
+						if ($iSigh > 0 and $i % 2 == 0)
+							$iSigh -= 1;
 
-						$iSigh = 0;
-						if ($i + 1 % 2 == 0)
-							$iSigh = ($i + 1) / 2 - 1;
-						else
-							$iSigh = round(($i + 1) / 2);
-
-						$date_to_enter = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["date"]["epoch"];
-						$temperature_high = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["high"]["celsius"];
-						$temperature_low = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["low"]["celsius"];
-						$wind = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["avewind"]["kph"];
-						$humidity = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["avehumidity"];
+						$date_to_enter = null;
+						$temperature_high = null;
+						$temperature_low = null;
+						$wind = null;
+						$humidity = null;
+						if (count($forecast["forecast"]["simpleforecast"]["forecastday"]) > $iSigh)
+						{
+							$new_date = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["date"]["epoch"];
+							$date_to_enter = new DateTime("@$new_date");
+							$date_to_enter = $date_to_enter->format("Y-m-d H:i:s");
+							$temperature_high = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["high"]["celsius"];
+							$temperature_low = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["low"]["celsius"];
+							$wind = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["avewind"]["kph"];
+							$humidity = $forecast["forecast"]["simpleforecast"]["forecastday"][$iSigh]["avehumidity"];
+						}
 						// $city
 						$text = $forecast["forecast"]["txt_forecast"]["forecastday"][$i]["fcttext_metric"];
 						$icon = $forecast["forecast"]["txt_forecast"]["forecastday"][$i]["icon"];
 						$icon_url = $forecast["forecast"]["txt_forecast"]["forecastday"][$i]["icon_url"];
+
+						$iSigh++;
 
 						$data_entry = array
 						(
@@ -66,8 +74,8 @@ class Main extends CI_Controller
 					}
 				}
 				$this->db->insert_batch("weatherdata", $dates);
-//			}
-//		}
+			}
+		}
 
 		$weather = $this->db->get("weatherdata");
 
@@ -79,7 +87,7 @@ class Main extends CI_Controller
 			'table_close'           => '</table></div>'
 		);
 		$this->table->set_template($template);
-		$data['table'] = $this->table->generate($query);
+		$data['table'] = $this->table->generate($weather);
 
 		$this->config->load('config');
 		$data['base_url'] = $this->config->item('base_url');
