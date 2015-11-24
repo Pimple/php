@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="wrapper">
 	<h1>Behold! Weather.</h1>
 
-	<p>Stuff.</p>
+	<p>Stuff.</p><? echo($test); ?>
 </div>
 
 </body>
