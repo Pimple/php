@@ -12,16 +12,19 @@ class Main extends CI_Controller
 		$this->load->database();
 		$query = $this->db->query('select max(timestamp) from weatherdata');
 
+		$now = date("Y-m-d H:i:s");
+
 		if (count($query->result_array()) > 0)
 		{
 			$latest_timestamp = strtotime($query->result_array()[0]["max(timestamp)"]);
-			$current_timestamp = date("Y-m-d H:i:s");
 			$data["test"] = $latest_timestamp;
 
-			if (date("Y-m-d", $latest_timestamp) < date("Y-m-d", strtotime($current_timestamp)) or
-					(date("Y-m-d", $latest_timestamp) == date("Y-m-d", strtotime($current_timestamp)) and
-					date("H", $latest_timestamp) + 24 < date("H", strtotime($current_timestamp))))
+			if (date("Y-m-d", $latest_timestamp) < date("Y-m-d", strtotime($now)) or
+					(date("Y-m-d", $latest_timestamp) == date("Y-m-d", strtotime($now)) and
+					date("H", $latest_timestamp) +24 < date("H", strtotime($now))))
 			{
+				$this->db->query("truncate table weatherdata");
+
 				$dates = array();
 				foreach ($cities as $city)
 				{
@@ -77,20 +80,23 @@ class Main extends CI_Controller
 			}
 		}
 
-		$weather = $this->db->get("weatherdata");
-
-		$this->load->library('table');
-
-		$template = array
-		(
-			'table_open'            => '<div class="table-responsive"><table class="table table-striped">',
-			'table_close'           => '</table></div>'
-		);
-		$this->table->set_template($template);
-		$data['table'] = $this->table->generate($weather);
-
-		$this->config->load('config');
+//		$weather = $this->db->get("weatherdata");
+//
+//		$this->load->library('table');
+//
+//		$template = array
+//		(
+//			'table_open'            => '<div class="table-responsive"><table class="table table-striped">',
+//			'table_close'           => '</table></div>'
+//		);
+//		$this->table->set_template($template);
+//		$data['table'] = $this->table->generate($weather);
+//
+//		$this->config->load('config');
 		$data['base_url'] = $this->config->item('base_url');
+
+		$data["weather_reports"] = $this->db->get("weatherdata")->result_array();
+		$data["cities"] = $cities;
 
 		$this->load->view('main_view', $data);
 	}
