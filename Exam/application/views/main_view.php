@@ -15,15 +15,15 @@ if (isset($_GET["city"]))
 <head>
 	<meta charset="utf-8">
 	<title>The weather forecast is FABULOUS!</title>
-	<link rel="stylesheet" href="stylish/bootstrap.min.css">
-	<link rel="stylesheet" href="stylish/bootstrap-responsive.css">
-	<link rel="stylesheet" href="stylish/bootswatch.css">
-	<link rel="stylesheet" href="stylish/prettify.css">
-	<link rel="stylesheet" href="stylish/fabulous.css">
+	<link rel="stylesheet" href="<?php echo $base_url ?>stylish/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php echo $base_url ?>stylish/bootstrap-responsive.css">
+	<link rel="stylesheet" href="<?php echo $base_url ?>stylish/bootswatch.css">
+	<link rel="stylesheet" href="<?php echo $base_url ?>stylish/prettify.css">
+	<link rel="stylesheet" href="<?php echo $base_url ?>stylish/fabulous.css">
 	<script type="text/javascript">
 		function setCity(city)
 		{
-			window.location.assign(window.location.href + "?city=" + city.value);
+			window.location.assign("<?php echo $base_url ?>?city=" + city.value);
 		}
 		<?php if (isset($_GET["city"])): ?>
 		function selectCity()
@@ -43,12 +43,13 @@ if (isset($_GET["city"]))
 
 	<div class="align-center">
 		<!-- TRIPLE MC HAMMER -->
-		<img src="picturesque/mchammer.gif">&nbsp;&nbsp;
-		<img src="picturesque/mchammer.gif">&nbsp;&nbsp;
-		<img src="picturesque/mchammer.gif">
+		<img src="<?php echo $base_url ?>picturesque/mchammer.gif">&nbsp;&nbsp;
+		<img src="<?php echo $base_url ?>picturesque/mchammer.gif">&nbsp;&nbsp;
+		<img src="<?php echo $base_url ?>picturesque/mchammer.gif">
 		<br><br>
 
 		<select id="cities" onChange="setCity(this)">
+			<option value=""></option>
 		<?php foreach ($cities as $city): ?>
 			<option value="<?php echo $city ?>"><?php echo ucfirst($city) ?></option>
 		<?php endforeach; ?>

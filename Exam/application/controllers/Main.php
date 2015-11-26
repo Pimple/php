@@ -80,19 +80,6 @@ class Main extends CI_Controller
 			}
 		}
 
-//		$weather = $this->db->get("weatherdata");
-//
-//		$this->load->library('table');
-//
-//		$template = array
-//		(
-//			'table_open'            => '<div class="table-responsive"><table class="table table-striped">',
-//			'table_close'           => '</table></div>'
-//		);
-//		$this->table->set_template($template);
-//		$data['table'] = $this->table->generate($weather);
-//
-//		$this->config->load('config');
 		$data['base_url'] = $this->config->item('base_url');
 
 		$data["weather_reports"] = $this->db->get("weatherdata")->result_array();

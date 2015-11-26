@@ -1,10 +1,12 @@
 body { margin: 100px; background: url('../picturesque/microfab.gif') top left; }
 h1 { margin-top: 35px; margin-bottom: 30px; }
+h2 { margin-top: 35px; margin-bottom: 30px; }
 p { margin-top: 15px; margin-bottom: 25px; }
 
-#wrapper { margin: 0 auto; }
+#wrapper { margin: 10px 0 100px 0 auto; }
 
 div.align-center { margin: 0 auto; width: 500px; text-align: center; }
+div.control { width: 800px; }
 
 div.weather_report
 {
