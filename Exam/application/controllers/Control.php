@@ -14,4 +14,17 @@ class Control extends CI_Controller
 
 		$this->load->view('control_view', $data);
 	}
+
+	public function delete($id)
+	{
+		$this->load->database();
+		$this->db->delete("weatherdata", array("id" => $id));
+
+		$data['base_url'] = $this->config->item('base_url');
+		$data["weather_reports"] = $this->db->get("weatherdata")->result_array();
+		$cities = ["Randers", "Aalborg", "Aarhus", "Viborg", "Copenhagen"];
+		$data["cities"] = $cities;
+
+		$this->load->view('control_view', $data);
+	}
 }

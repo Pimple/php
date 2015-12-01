@@ -94,7 +94,7 @@ if (isset($_GET["city"]))
 
 		<?php foreach ($weather_reports as $report): ?>
 			<div class="col-xs-6 weather_report">
-				<h2><?php echo $report["city"] ?><img src="<?php echo $report["icon_url"] ?>"></h2>
+				<h2><a href="<?php echo $base_url ?>index.php/control/delete/<?php echo $report["id"] ?>" class="delete">X</a> <?php echo $report["city"] ?><img src="<?php echo $report["icon_url"] ?>"></h2>
 				<h3><?php echo $report["date"] ?></h3>
 
 				<p>
